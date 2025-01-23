@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cek Kontol dan Memek</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cek Kontol dan Memek</h1>
+    <p>Masukkan nama Anda:</p>
+    <input type="text" id="nameInput" placeholder="Nama Anda" />
+    <br />
+    <button onclick="cekKontol()">Cek Kontol</button>
+    <button onclick="cekMemek()">Cek Memek</button>
+    <div id="output" class="output"></div>
+  </div>
+
+  <script>
+    const warnaBiru = [
+      "Biru Muda 🌊", "Biru Langit ☁️", "Biru Laut 🌊", "Biru Gelap 🌌", "Biru Navy 🚢", 
+      "Biru Pastel 🎨", "Biru Cerah 💎", "Biru Pucat ❄️", "Biru Elektrik ⚡", "Biru Keabuan 🌫️"
+    ];
+
+    const warnaPink = [
+      "Pink Lembut 🌸", "Pink Cerah 🌷", "Pink Muda 🌺", "Pink Keunguan 🌷", "Pink Pastel 🎨", 
+      "Pink Fuchsia 🌹", "Pink Neon 🌟", "Pink Gelap 🌺", "Pink Pucat 🩷", "Pink Berdebu 🌸"
+    ];
+
+    const ukuran = [
+      "Kecil 🐞", "Sedang 🐿️", "Besar 🦌", "Mini 🐜", "Jumbo 🐘",
+      "Medium 🐕", "Super Besar 🦏", "Ramping 🐍", "Bulat 🥎", "Memanjang 🌭"
+    ];
+
+    const tipe = [
+      "Lurus ➖", "Melengkung ➰", "Bergelombang 🌊", "Tegak ↕️", "Membulat ⚪",
+      "Pipih ➖", "Kaku ⚡", "Lentur 🌀", "Runcing 🔼", "Penuh gaya 😎"
+    ];
+
+    const biasana = [
+      "Bersih 🌟", "Harum 🌹", "Terawat 🛁", "Pemalu 🙈", "Santai 🛋️", 
+      "Dominan 🦁", "Kekar 💪", "Anggun 💃", "Pemikat 💖", "Elegan ✨"
+    ];
+
+    function randomElement(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function cekKontol() {
+      const name = document.getElementById("nameInput").value;
+      if (name.toLowerCase() === "agus") {
+        document.getElementById("output").innerHTML = `
+          <h3>Hasil Cek Kontol:</h3>
+          <p><strong>Nama:</strong> ${name}</p>
+          <p><strong>Keterangan:</strong> INI OWNER GW LAHH 😎</p>
+        `;
+      } else if (name) {
+        document.getElementById("output").innerHTML = `
+          <h3>Hasil Cek Kontol:</h3>
+          <p><strong>Nama:</strong> ${name}</p>
+          <p><strong>Panjang:</strong> ${Math.floor(Math.random() * 20) + 5} cm 📏</p>
+          <p><strong>Ukuran:</strong> ${randomElement(ukuran)}</p>
+          <p><strong>Warna:</strong> ${randomElement(warnaBiru)}</p>
+          <p><strong>Tipe:</strong> ${randomElement(tipe)}</p>
+          <p><strong>Biasanya:</strong> ${randomElement(biasana)}</p>
+        `;
+      } else {
+        alert("Masukkan nama terlebih dahulu!");
+      }
+    }
+
+    function cekMemek() {
+      const name = document.getElementById("nameInput").value;
+      if (name.toLowerCase() === "agus") {
+        document.getElementById("output").innerHTML = `
+          <h3>Hasil Cek Memek:</h3>
+          <p><strong>Nama:</strong> ${name}</p>
+          <p><strong>Keterangan:</strong> INI OWNER GW LAHH 😎</p>
+        `;
+      } else if (name) {
+        document.getElementById("output").innerHTML = `
+          <h3>Hasil Cek Memek:</h3>
+          <p><strong>Nama:</strong> ${name}</p>
+          <p><strong>Panjang:</strong> ${Math.floor(Math.random() * 10) + 5} cm 📏</p>
+          <p><strong>Ukuran:</strong> ${randomElement(ukuran)}</p>
+          <p><strong>Warna:</strong> ${randomElement(warnaPink)}</p>
+          <p><strong>Tipe:</strong> ${randomElement(tipe)}</p>
+          <p><strong>Biasanya:</strong> ${randomElement(biasana)}</p>
+        `;
+      } else {
+        alert("Masukkan nama terlebih dahulu!");
+      }
+    }
+  </script>
+</body>
+</html>
